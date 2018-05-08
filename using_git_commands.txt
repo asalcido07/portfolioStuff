@@ -1,0 +1,33 @@
+Owner@Owner-HP MINGW64 ~ (master)
+$ cd Desktop
+
+Owner@Owner-HP MINGW64 ~/Desktop (master)
+$ cd Adam
+
+Owner@Owner-HP MINGW64 ~/Desktop/Adam (master)
+$ cd portfolioStuff
+
+Owner@Owner-HP MINGW64 ~/Desktop/Adam/portfolioStuff (master)
+$ git status
+On branch master
+Your branch is up to date with 'origin/master'.
+
+nothing to commit, working tree clean
+
+Owner@Owner-HP MINGW64 ~/Desktop/Adam/portfolioStuff (master)
+$ git add -A
+
+Owner@Owner-HP MINGW64 ~/Desktop/Adam/portfolioStuff (master)
+$ git commit -m "Pushings changes to repo again"
+On branch master
+Your branch is up to date with 'origin/master'.
+
+nothing to commit, working tree clean
+
+Owner@Owner-HP MINGW64 ~/Desktop/Adam/portfolioStuff (master)
+$ git push origin master
+Username for 'https://github.com': asalcido07
+GEverything up-to-date
+
+Owner@Owner-HP MINGW64 ~/Desktop/Adam/portfolioStuff (master)
+$
