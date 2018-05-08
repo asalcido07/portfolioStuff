@@ -1,0 +1,321 @@
+<?php
+    session_start();
+    
+    if (!isset($_SESSION['username'])) {
+        header('Location: ./login.html');
+        exit();
+    }
+ 
+?>
+
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<title>gamescoop.com</title>
+		<meta name="viewport" content="width=device-width, initial-scale=1.0">
+		<link href="css/bootstrap.min.css" rel="stylesheet" type="text/css">
+		<link href="css/styles.css" rel="stylesheet" type="text/css">
+		<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css">
+		<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
+		<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js"></script>
+		<link href="css/youtube-modal.css" rel="stylesheet" type="text/css">
+		<script type="text/javascript">
+			/* global $ */
+			
+			$(document).ready(function(){
+			    /* Get iframe src attribute value i.e. YouTube video url
+			    and store it in a variable */
+			    var url = $("#video").attr('src');
+			    var url1 = $("#video1").attr('src');
+			    var url2 = $("#video2").attr('src');
+			    var url3 = $("#video3").attr('src');
+			    var url4 = $("#video4").attr('src');
+			    var url5 = $("#video5").attr('src');
+
+			    
+			    /* Assign empty url value to the iframe src attribute when
+			    modal hide, which stop the video playing */
+			    $("#myModal").on('hide.bs.modal', function(){
+			        $("#video").attr('src', '');
+			    });
+			    
+			    /* Assign the initially stored url back to the iframe src
+			    attribute when modal is displayed again */
+			    $("#myModal").on('show.bs.modal', function(){
+			        $("#video").attr('src', url);
+			    });
+			    
+			    /* Assign empty url value to the iframe src attribute when
+			    modal hide, which stop the video playing */
+			    $("#myModal1").on('hide.bs.modal', function(){
+			        $("#video1").attr('src', '');
+			    });
+			    
+			    /* Assign the initially stored url back to the iframe src
+			    attribute when modal is displayed again */
+			    $("#myModal1").on('show.bs.modal', function(){
+			        $("#video1").attr('src', url1);
+			    });
+			    
+			    /* Assign empty url value to the iframe src attribute when
+			    modal hide, which stop the video playing */
+			    $("#myModal2").on('hide.bs.modal', function(){
+			        $("#video2").attr('src', '');
+			    });
+			    
+			    /* Assign the initially stored url back to the iframe src
+			    attribute when modal is displayed again */
+			    $("#myModal2").on('show.bs.modal', function(){
+			        $("#video2").attr('src', url2);
+			    });
+			    
+			    /* Assign empty url value to the iframe src attribute when
+			    modal hide, which stop the video playing */
+			    $("#myModal3").on('hide.bs.modal', function(){
+			        $("#video3").attr('src', '');
+			    });
+			    
+			    /* Assign the initially stored url back to the iframe src
+			    attribute when modal is displayed again */
+			    $("#myModal3").on('show.bs.modal', function(){
+			        $("#video3").attr('src', url3);
+			    });
+			    
+			    /* Assign empty url value to the iframe src attribute when
+			    modal hide, which stop the video playing */
+			    $("#myModal4").on('hide.bs.modal', function(){
+			        $("#video4").attr('src', '');
+			    });
+			    
+			    /* Assign the initially stored url back to the iframe src
+			    attribute when modal is displayed again */
+			    $("#myModal4").on('show.bs.modal', function(){
+			        $("#video4").attr('src', url4);
+			    });
+			    
+			    /* Assign empty url value to the iframe src attribute when
+			    modal hide, which stop the video playing */
+			    $("#myModal5").on('hide.bs.modal', function(){
+			        $("#video5").attr('src', '');
+			    });
+			    
+			    /* Assign the initially stored url back to the iframe src
+			    attribute when modal is displayed again */
+			    $("#myModal5").on('show.bs.modal', function(){
+			        $("#video4").attr('src', url5);
+			    });
+			});
+		</script>
+	</head>
+	<body>
+		<div class="navbar navbar-inverse navbar-static-top">
+			<div class="container">
+				
+				<a href="index.html" class="navbar-brand" style="font-size: 23px">GameScoop</a>
+				<div class="navbar-header"> <!-- Need this to make collapsed menu button work. -->
+					<button class="navbar-toggle" data-toggle="collapse" data-target=".navHeaderCollapse">
+						<span class="icon-bar"></span>
+						<span class="icon-bar"></span>
+						<span class="icon-bar"></span>
+					</button>
+				</div>
+					<div class="collapse navbar-collapse navHeaderCollapse">
+					<ul class="nav navbar-nav navbar-right">
+						<li><a href="index.html"><span style="linear-gradient(red, blue);">Home</span></a></li>
+						<li><a href="about.html">About</a></li>
+						<li><a href="logout.php">Log Out</a></li>
+					</ul>
+				</div>
+			</div>
+		</div>
+		<div class="container">
+			<div class="carousel fade-carousel slide" data-ride="carousel" data-interval="7000" id="bs-carousel">
+			  <!-- Overlay -->
+			  <div class="overlay"></div>
+
+			  <!-- Indicators -->
+			  <ol class="carousel-indicators">
+			    <li data-target="#bs-carousel" data-slide-to="0" class="active"></li>
+			    <li data-target="#bs-carousel" data-slide-to="1"></li>
+			    <li data-target="#bs-carousel" data-slide-to="2"></li>
+			  </ol>
+			  
+			  <!-- Wrapper for slides -->
+			  <div class="carousel-inner">
+			    <div class="item slides active">
+			      <div class="slide-1"></div>
+			       <div class="hero">        
+				        <h1>Your daily dose of video game content</h1>           
+			      </div>
+			    </div>
+			    <div class="item slides">
+			      <div class="slide-2"></div>
+			      <div class="hero">        
+		        	<h1>Get the latest scoop on video game news</h1>         
+			      </div>
+			    </div>
+			    <div class="item slides">
+			      <div class="slide-3"></div>
+			      <div class="hero">        
+				        <h1>Get your spoonful with GameScoop</h1>           
+			      </div>
+			    </div>
+			  </div> 
+			</div>
+		</div>
+		<div class="container">
+			<div class="row" style="margin-top:25px; margin-bottom:25px;margin-left: 0px;margin-right: 0px;">
+				<div class="col-md-3 panel panel-default panel-body">
+					<img src="http://www.ultrachentv.com/wp-content/uploads/2015/12/Capcom-Cup.jpg" style="max-width:100%; max-height:100%; margin-bottom: 15px">
+					<h3 >Capcom Cup Tournament Begins Today, Dec. 5th!</h3>
+					<p>The first ever Capcom Cup will be hosted at the PSX (Playstation Experience) in San Francisco. It will feature 32 of the best fighting game players in the world, and it will all be available on Twitch! Check out the links below. Feel free to watch the trailer for the Capcom Cup from the "Watch" button.</p>
+
+					<p><a href="http://www.twitch.tv/capcomfighters" target="_blank">Capcom Cup Stream</a></p>
+
+					<p><a href="http://www.twitch.tv/capcomfighters2" target="_blank">Capcom Cup Stream #2</a></p>
+					
+					<div class="bs-example">
+					    <!-- Button HTML (to Trigger Modal) -->
+					    <a href="#myModal"  class="btn btn-danger" data-toggle="modal">Watch</a>
+					    
+					    <!-- Modal HTML -->
+					    <div id="myModal" class="modal fade">
+					        <div class="modal-dialog">
+					            <div class="modal-content">
+					                <div class="modal-body">
+					                    <iframe id="video" width="560" height="315" src="//www.youtube.com/embed/eIRgkiIVgyw" frameborder="0" allowfullscreen></iframe>
+					                </div>
+					            </div>
+					        </div>
+					    </div>
+					</div>    
+				</div>
+				<div class="col-md-3 panel panel-default panel-body">
+					<img src="http://media.eventhubs.com/images/2015/09/02_mkxkp01.jpg" style="max-width:100%; max-height:100%; margin-bottom: 15px">
+					<h3 >New Characters For Mortal Kombat X</h3>
+					<p>A new trailer has revealed several new characters in Mortal Kombat X coming in Kombat Pack 2! Find out who made it into the roster!</p>
+					
+					<div class="bs-example">
+					    <!-- Button HTML (to Trigger Modal) -->
+					    <a href="#myModal1"  class="btn btn-danger" data-toggle="modal">Watch</a>
+					    
+					    <!-- Modal HTML -->
+					    <div id="myModal1" class="modal fade">
+					        <div class="modal-dialog">
+					            <div class="modal-content">
+					                <div class="modal-body">
+					                    <iframe id="video1" width="560" height="315" src="//www.youtube.com/embed/1NE_VZM0fLk" frameborder="0" allowfullscreen></iframe>
+					                </div>
+					            </div>
+					        </div>
+					    </div>
+					</div>
+				</div>
+				<div class="col-md-3 panel panel-default panel-body">
+					<img class="img-center" src="http://assets.vg247.com/current//2015/11/Shadow_Jago_-_Final_Boss.png" style="max-width:100%; max-height:100%; margin-bottom: 15px">
+					<h3>Shadow Jago Trailer</h3>
+					<p>Check out the new trailer for Killer Instinct. For quite some time Shadow Jago has been speculated to become part of the roster. Well, the rumors are true.</p>
+					
+					<div class="bs-example">
+					    <!-- Button HTML (to Trigger Modal) -->
+					    <a href="#myModal2"  class="btn btn-danger" data-toggle="modal">Watch</a>
+					    
+					    <!-- Modal HTML -->
+					    <div id="myModal2" class="modal fade">
+					        <div class="modal-dialog">
+					            <div class="modal-content">
+					                <div class="modal-body">
+					                    <iframe id="video2" width="560" height="315" src="//www.youtube.com/embed/Pv-v6ChzFNs" frameborder="0" allowfullscreen></iframe>
+					                </div>
+					            </div>
+					        </div>
+					    </div>
+					</div>
+				</div>
+				<div class="col-md-3 panel panel-default panel-body">
+					<img src="http://media.eventhubs.com/images/2015/12/03_mczsticks01.jpg" style="max-width:100%; max-height:100%; margin-bottom: 15px">
+					<h3>Sweet New Fightsticks From Mad Catz</h3>
+					<p>Capcom and Mad Catz partner up again to bring us these totally awesome new fightsticks and gamepads. Check'em out!</p>
+					<a href="fightSticks.html" class="btn btn-success">Read More</a>
+				</div>
+			</div>
+			<div class="row" style="margin-top:25px; margin-bottom:25px;margin-left: 0px;margin-right: 0px;">
+				<div class="col-md-3 panel panel-default panel-body">
+					<img class="img-center" src="https://i.ytimg.com/vi/yKtuUa7iZK8/hqdefault.jpg" style="max-width:100%; max-height:100%; margin-bottom: 15px">
+					<h3>Zero To Hero, Part 2</h3>
+					<p>Youtuber <a href="https://www.youtube.com/user/Miles923" style="text-decoration: none">Maximilian Dood</a> continues his online journey to master Karin in Street Fighter V from scratch.</p>
+					
+					<div class="bs-example">
+					    <!-- Button HTML (to Trigger Modal) -->
+					    <a href="#myModal3"  class="btn btn-danger" data-toggle="modal">Watch</a>
+					    
+					    <!-- Modal HTML -->
+					    <div id="myModal3" class="modal fade">
+					        <div class="modal-dialog">
+					            <div class="modal-content">
+					                <div class="modal-body">
+					                    <iframe id="video3" width="560" height="315" src="//www.youtube.com/embed/yKtuUa7iZK8" frameborder="0" allowfullscreen></iframe>
+					                </div>
+					            </div>
+					        </div>
+					    </div>
+					</div>
+				</div>
+				<div class="col-md-3 panel panel-default panel-body">
+					<img src="http://static1.gamespot.com/uploads/original/1179/11799911/2956753-tease.png" style="max-width:100%; max-height:100%; margin-bottom: 15px">
+					<h3>6 Rumored DLC Characters In SFV Post-Launch</h3>
+					<p>Hackers have broke into the SFV beta and found these characters within the files. Find out if your character made the first cut for DLC!</p>
+					<a href="dlcCharacters.html" class="btn btn-success">Read More</a>
+				</div>
+				<div class="col-md-3 panel panel-default panel-body">
+					<img src="http://media.eventhubs.com/images/2015/10/08_laur01.jpg" style="max-width:100%; max-height:100%;">
+					<h3 >Laura Debuts In Street Fighter V</h3>
+					<p>The new Brazilian Capoeira-Brazilian Jiu-Jitsu fighter surges to the Street Fighter V roster!</p>
+					<a href="lauraDebut.html" class="btn btn-success">Read More</a>
+					
+					<div class="bs-example">
+					    <!-- Button HTML (to Trigger Modal) -->
+					    <a href="#myModal4"  class="btn btn-danger" data-toggle="modal">Watch</a>
+					    
+					    <!-- Modal HTML -->
+					    <div id="myModal4" class="modal fade">
+					        <div class="modal-dialog">
+					            <div class="modal-content">
+					                <div class="modal-body">
+					                    <iframe id="video4" width="560" height="315" src="//www.youtube.com/embed/Y0U49aqA2MM" frameborder="0" allowfullscreen></iframe>
+					                </div>
+					            </div>
+					        </div>
+					    </div>
+					</div>
+				</div>
+				<div class="col-md-3 panel panel-default panel-body">
+					<img src="http://i0.wp.com/hd1jump.com/wp-content/uploads/2015/07/1437382941-street-fighter-v-necalli.jpg" style="max-width:100%; max-height:100%; margin-bottom: 15px">
+					<h3>Necalli Debuts In Street Fighter V</h3>
+					<p>The mysterious Aztec warrior from parts unknown rampages his way to the Street Fighter V roster!</p>
+					<a href="necalliDebut.html" class="btn btn-success">Read More</a>
+					
+					<div class="bs-example">
+					    <!-- Button HTML (to Trigger Modal) -->
+					    <a href="#myModal5"  class="btn btn-danger" data-toggle="modal">Watch</a>
+					    
+					    <!-- Modal HTML -->
+					    <div id="myModal5" class="modal fade">
+					        <div class="modal-dialog">
+					            <div class="modal-content">
+					                <div class="modal-body">
+					                    <iframe id="video5" width="560" height="315" src="//www.youtube.com/embed/OzrPqNHB1bo" frameborder="0" allowfullscreen></iframe>
+					                </div>
+					            </div>
+					        </div>
+					    </div>
+					</div>
+				</div>
+			</div>
+			&copy; GameScoop, Inc. 2016
+		</div>
+		<script src="//ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
+		<script src="js/bootstrap.js"></script>
+	</body>
+</html>
+

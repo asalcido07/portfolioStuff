@@ -1,0 +1,64 @@
+To-do list:
+
+1. Account for all return statuses
+    
+    x, done
+    /, incomplete
+    
+    
+    1. Time Slice x
+    2. Halt x
+    3. Out of Bound x
+    4. Stack Overflow x
+    5. Stack Underflow x
+    6. Invalid Opcode  x
+    7. Read Operation x
+    8. Write Operation x
+    9. Overflow (indicated by overflow bit) 
+    
+    Stack overflow and out-of-bound errors depend on the limit values for each program.
+    Stack overflow is detected by using the sum of all the limits (sizes). If sp - 6 <= sum of limits - 1,
+    then the stack has overflowed. 
+    Out-of-bound references depend on base and limit (if the address is >= base + limit, it has exceeeded the scope of the program).
+    
+    When any of these conditions are encountered, have the virtual machine
+    set the status register appropriately and pass back control to the OS.
+    Then, via the context_switch() function, the OS will decide what to do
+    with the running program (such as permanently terminating it, moving
+    it to waitQ for an I/O operation, moving it back to readyQ, etc.).
+    Therefore, we need to modify the context_switch() function to be responsible 
+    for moving the PCBs to their proper queues, depending on the return status.
+    From Dr. Zemoudeh's page:
+    
+    "
+    first, all processes in waitQ whose I/O operation has been completed are placed in readyQ,
+    second the running process is placed in the proper queue or terminated, and
+    third the next process from readyQ is assigned to VM (CPU). 
+    "
+
+    Note: the second step includes saving the current state of the running process to its PCB (if the situation calls for it). For
+    example, time slice and read and write operations have to save the current state of the process during context switch so that
+    a new process can be run. 
+2. Figure out how to associate all of the goddamn file streams in the PCB
+with the appropriate files (.o, .in, .out, .st).
+    A) Modify the file streams in PCB to be POINTERS to file streams, not file streams themselves.
+    File streams DO NOT have copy constructors!!! (completed, I think)
+
+3. Any other calculations for clock ticks, including keeping counts of wait time,
+I/O time, etc. These values should be stored in the PCB as accounting information
+
+4. At run time, adjust the addresses in the instructions that use addresses (load, store, call, 4 jump instructions) by
+adding the value of the base register to them. We must do this because all of the addresses referenced in an assembly 
+program are relative to the base. (completed)
+
+5. Modify the status register variable to allow VM to set the appropriate bits (and allow the OS to read those bits).
+
+Possible sources of errors:
+1. When setting the status register bits with the << operator, this may result in an incorrect status. 
+    
+
+Questions to ask:
+1. When adding context switch time, do we do it before or after checking for I/O completion times? 
+Answer: Before
+
+2.

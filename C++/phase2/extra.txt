@@ -1,0 +1,97 @@
+/*
+	if (running != NULL) {
+	running->stack_file.seekp(0);               
+	for (int counter = running->sp; counter != MEM_SIZE; counter++) { // May be have to switch prefix ++
+		running->stack_file << mem[counter] << "\n";
+	}
+    
+        
+        if (MEM_SIZE - running->sp > running->largest_stack_size) {
+            running->largest_stack_size = MEM_SIZE - running->sp;
+        }
+        */
+//in context switch
+
+
+//WAS IN OS.CPP
+//code cut from VirtualMachine.cpp; still need to make modifications
+/*void OS::read()
+{
+    cout << "Reading from file..." << endl;
+	running->input_file >> r[ins.f2.RD]; // Takes in value from fstream input and place it in a register
+	//vm.read();
+	context_switch();
+}*/
+
+//code cut from VirtualMachine.cpp; still need to make modifications
+/*void OS::write()
+{
+    cout << "Writing to file..." << endl;
+	//sign extends result if sign bit indicates a negative number
+	int total_bits = sizeof(int) * 8;
+	if (r[ins.f2.RD] & (1 << 15)) {
+		for (int i = 16; i < total_bits; i++) 
+			r[ins.f2.RD] |= (1 << i);
+	}
+	running->output_file << r[ins.f2.RD] << endl;	// Writes out value inside register to fstream 
+	//vm.write();
+	context_switch();
+}*/
+
+//sign extends result if sign bit indicates a negative number
+            	/*int total_bits = sizeof(int) * 8;
+            	if (r[ins.f2.RD] & (1 << 15)) {
+            		for (int i = 16; i < total_bits; i++) 
+            			r[ins.f2.RD] |= (1 << i);
+            	}*/
+            	
+ //delete running;
+    
+    /*if (readyQ.size() == 0) {
+        running = NULL;
+    } else {
+        running = readyQ.front();
+        readyQ.pop();
+        
+        /*running->stack_file.seekg(0);*/
+        
+        /*for (int counter = running->sp; counter != MEM_SIZE; counter++) {   // May have to change to prefix ++
+            if (!running->stack_file.good()) 
+                break;
+            running->stack_file >> mem[counter];
+        }
+        
+        running->waiting_time += (vm.clk - running->clk);
+    }*/
+    
+    
+void OS::display_info()
+{
+	cout <<"System time: " << double((context_switch_ticks + idle_ticks) / 1000.0) << "\n" <<
+	"System CPU utilization: " << double((context_switch_ticks + idle_ticks) / vm.clk) << "\n" <<
+	"User CPU utilization: " << double(jobs_cpu_time / vm.clk) << "\n" <<
+	"Throughput: " << double((vm.clk / 1000.0) / double(total_number_of_processes)) << "\n";
+} // display_info
+
+
+//IN DECODE FUNCTION OF VM
+/*
+	if ((ins.f1.OP == 22) || (ins.f1.OP == 23)) {
+		clk += 28;
+	} else if (((ins.f2.OP == 0) && (ins.f2.I == 0)) || (ins.f1.OP == 1) || (ins.f1.OP == 20) || (ins.f1.OP == 21)) {
+		clk += 4; 
+	} else {
+		clk++;
+	} // These conditions dont' take care of every case, have to look over
+	  // Modified code to take care of every case possible at 12:24 AM  
+	  // Conditions modified 4/24, 10:41 AM
+	*/
+	
+//StatRegister bits_grabber;
+	//bits_grabber.i = sr;
+	
+	/*
+		if (bits_grabber.bit_format.STATUS != 1) {
+			bits_grabber.bit_format.STATUS |= 0 << 5;
+		} 
+	*/

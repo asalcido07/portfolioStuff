@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+
+<head>
+	<meta charset="utf-8">
+	<script src="ajax.js"></script>
+</head>
+<body>
+    
+    <h1>Track 2 Assignment</h1>
+    
+    <p>
+        Page Views: <span id="page_views"></span>
+    </p>
+    
+    <script>
+         ajax('page_views.php', null, function(responseObject) {
+            document.getElementById('page_views').innerHTML = responseObject.counter;
+        });
+    </script>
+</body>
+</html>

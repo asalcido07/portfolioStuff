@@ -1,0 +1,135 @@
+<?php
+    session_start();
+    
+    if (!isset($_SESSION['username'])) {
+        header('Location: ./login.html');
+        exit();
+    }
+ 
+?>
+
+<!DOCTYPE html>
+<html>
+	<head>
+		<title>gamescoop.com</title>
+		<meta name="viewport" content="width=device-width, initial-scale=1.0">
+		<link href="css/bootstrap.min.css" rel="stylesheet">
+		<link href="css/styles.css" rel="stylesheet">
+	</head>
+	<body>
+		<div class="navbar navbar-inverse navbar-static-top">
+			<div class="container">
+				<a href="index.html" class="navbar-brand" style="font-size: 23px">GameScoop!</a>
+				<div class="navbar-header"> <!-- Need this to make collapsed menu button work. -->
+					<button class="navbar-toggle" data-toggle="collapse" data-target=".navHeaderCollapse">
+						<span class="icon-bar"></span>
+						<span class="icon-bar"></span>
+						<span class="icon-bar"></span>
+					</button>
+				</div>
+					<div class="collapse navbar-collapse navHeaderCollapse">
+
+					<ul class="nav navbar-nav navbar-right">
+						<li><a href="index.html">Home</a></li>
+						<li><a href="about.html">About</a></li>
+						<li><a href="logout.php">Log Out</a></li>
+					</ul>
+				</div>
+			</div>
+		</div>
+
+		<div class="container">
+			<div class="row">
+				<div class="col-lg-9">
+					<div class="panel panel-default">
+						<div class="panel-body">
+							<div class="page-header">
+								<h3> 6 Rumored DLC Characters In SFV Post-Launch <small>Posted on Oct. 27</small></h3>
+							</div>
+							<img class="featuredImg" src="http://media.eventhubs.com/images/2015/10/27_newsf5chars.jpg" width="100%">
+
+							<hr>
+
+							<h4> Data Reveals Familiar Faces </h4>
+
+							<p>From the result of some hackers cracking through files from the SFV Beta, discovery of DLC characters has been made. Here are some of videos revealing the information: </p>
+
+							<hr>
+							
+							<center>	
+								<iframe width="560" height="315" src="https://www.youtube.com/embed/zk3rQBkiG_E" frameborder="0" allowfullscreen></iframe>
+
+								<iframe width="560" height="315" src="https://www.youtube.com/embed/FZViSaGjDbM" frameborder="0" allowfullscreen></iframe>
+							</center>
+
+							<hr>
+
+							<h4>6 Characters Revealed To Be In SFV</h4>
+
+							<hr>
+
+							<h4>Guile</h4>
+
+							<img class="featuredImg" src="http://vignette1.wikia.nocookie.net/streetfighter/images/3/3f/12_sfxtekken07.jpg/revision/latest?cb=20110412213350" width="50%" height="50%">
+							<p>Guile is from the Street Fighter II roster and is a great addtion to the roster. From the perspective of the story, adding him would complete his search for Charlie Nash (also in the game), who has been missing since Street Fighter Alpha 3.</p>
+
+							<hr>
+
+							<h4>Ibuki</h4>
+							<img class="featuredImg" src="http://vignette1.wikia.nocookie.net/streetfighter/images/5/54/IbukiPortraitSFIII3rd.jpg/revision/latest?cb=20100218125336" width="50%" height="50%">
+							<p>Ibuki once again has made it to another main series sequel of Street Fighter. Quite popular in her Street Fighter III days, fans will rejoice.</p>
+
+							<hr>
+
+							<h4>Juri</h4>
+							<img class="featuredImg" src="http://vignette3.wikia.nocookie.net/streetfighter/images/3/3d/SFXT-Street-Fighter-X-Tekken-Art-Juri_Han.jpg/revision/latest?cb=20120519225915" width="50%" height="50%">
+							<p>Juri is a fan favorite from Street Fighter IV, although she technically didn't make her debut until Super Street Fighter IV. Surely her popularity has been noted by Capcom and thus has led her to making an appearance in SFV.</p>
+
+							<hr>
+
+							<h4>Balrog</h4>
+							<img class="featuredImg" src="http://vignette4.wikia.nocookie.net/streetfighter/images/c/c6/22_balrogart.jpg/revision/latest?cb=20100205214957" width="50%" height="50%">
+							<p>Balrog is one of the original 4 bosses from Street Fighter II. There's a severe lack of boxing characters in SFV, so having him would be a great add to the roster.</p>
+
+							<hr>
+
+							<h4>Alex</h4>
+							<img class="featuredImg" src="http://static.comicvine.com/uploads/original/2/24330/555799-alex_d_jpg.jpg" width="50%" height="50%">
+							<p>The titular character from SFIII, Alex has been demanded for quite some time. Although it's kind of strange he didn't make the main initial roster, I'm sure fans will be ecstatic about this one.</p>
+
+							<hr>
+
+							<h4>Urien</h4>
+							<img class="featuredImg" src="http://vignette3.wikia.nocookie.net/streetfighter/images/c/c2/Urien_(SF3II).png/revision/latest?cb=20120224204331" width="50%" height="50%">
+							<p>Yet another fan favorite Street Fighter III character long over due for an appearance. Urien is the brother of SF III boss, Gill. Having him in SFV would bridge the gap between SFII and SFIII with the ascenscion of the Illuminati, and possibly explain Charlie Nash's gem on his forehead. Here's hoping he retains his Supert Art, Aegis Reflector.
+
+						</div>
+					</div>
+				</div>
+				<div class="col-lg-3">
+					<div class="list-group">
+						<a href="fightSticks.html" class="list-group-item">
+							<img src="http://media.eventhubs.com/images/2015/12/03_mczsticks01.jpg" style="max-width:100%; max-height:100%; margin-bottom: 15px">
+							<h4 class="list-group-item-heading">Sweet New Fightsticks From Mad Catz</h4>
+							<p class="list-group-item-text">Capcom and Mad Catz partner up again to bring us these totally awesome new fightsticks and gamepads. Check'em out!</p>
+						</a>
+						<a href="lauraDebut.html" class="list-group-item">
+							<img src="http://media.eventhubs.com/images/2015/10/08_laur01.jpg" style="max-width:100%; max-height:100%; margin-bottom: 15px">
+							<h4 class="list-group-item-heading">Laura Debuts In Street Fighter V</h4>
+							<p class="list-group-item-text">The new Brazilian Capoeira-Brazilian Jiu-Jitsu fighter surges to the Street Fighter V roster!</p>
+						</a>
+						<a href="necalliDebut.html" class="list-group-item">
+							<img src="http://i0.wp.com/hd1jump.com/wp-content/uploads/2015/07/1437382941-street-fighter-v-necalli.jpg" style="max-width:100%; max-height:100%; margin-bottom: 15px">
+							<h4 class="list-group-item-heading">Necalli Debuts In Street Fighter V</h4>
+							<p class="list-group-item-text">The mysterious Aztec warrior from parts unknown rampages his way to the Street Fighter V roster!</p>
+						</a>
+				</div>
+			</div>
+		</div>
+		&copy; GameScoop, Inc. 2016
+	</div>
+	<script src="//ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
+	<script src="js/bootstrap.js"></script>
+	</body>
+</html>
+

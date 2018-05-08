@@ -1,0 +1,12 @@
+if ((running->sp < 6) || (running->sp - 6 <= running->base + running->size)) {
+				running->sr.status = ST_OVERFLOW;
+				return;
+			}
+			mem[running->sp--] = ++running->pc;
+			mem[running->sp--] = *(uint16_t*)&running->sr;
+			mem[running->sp--] = running->r[0];
+			mem[running->sp--] = running->r[1];
+			mem[running->sp--] = running->r[2];
+			mem[running->sp--] = running->r[3];
+			running->pc = running->ir.addr;
+			break;

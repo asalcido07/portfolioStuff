@@ -1,0 +1,103 @@
+<?php
+    session_start();
+    
+    if (!isset($_SESSION['username'])) {
+        header('Location: ./login.html');
+        die();
+    }
+ 
+?>
+
+<!DOCTYPE html>
+<html>
+	<head>
+		<title>gamescoop.com</title>
+		<meta name="viewport" content="width=device-width, initial-scale=1.0">
+		<link href="css/bootstrap.min.css" rel="stylesheet">
+		<link href="css/styles.css" rel="stylesheet">
+	</head>
+	<body>
+		<div class="navbar navbar-inverse navbar-static-top">
+			<div class="container">
+				<a href="index.html" class="navbar-brand" style="font-size: 23px">GameScoop</a>
+				<div class="navbar-header"> <!-- Need this to make collapsed menu button work. -->
+					<button class="navbar-toggle" data-toggle="collapse" data-target=".navHeaderCollapse">
+						<span class="icon-bar"></span>
+						<span class="icon-bar"></span>
+						<span class="icon-bar"></span>
+					</button>
+				</div>
+					<div class="collapse navbar-collapse navHeaderCollapse">
+
+					<ul class="nav navbar-nav navbar-right">
+						<li><a href="index.html">Home</a></li>
+						<li><a href="about.html">About</a></li>
+						<li><a href="logout.php">Log Out</a></li>
+					</ul>
+				</div>
+			</div>
+		</div>
+
+		<div class="container">
+			<div class="row">
+				<div class="col-lg-9">
+					<div class="panel panel-default">
+						<div class="panel-body">
+							<div class="page-header">
+								<h3> Necalli Debuts In Street Fighter V <small>Posted on Sept. 26</small></h3>
+							</div>
+							<img class="featuredImg" src="http://media.eventhubs.com/images/2015/07/19_necallipics06.jpg" width="100%">
+
+							<hr>
+
+							<h4>A Man Outside, A Beast Within</h4>
+
+							<p>Patiently we awaited for a new character to arrive into Street Fighter V. Finally, a new fighter enters the battle! Necalli had been teased at the end of EVO2k15 (the largest fighting game tournament) when a trailer for M. Bison was revealed at the end of the event. Not much was known, other than he was possibly a Maori figher. However, after observing the trailer and photos, it appears he closely resembles an Aztec warrior more than anything.</p>
+
+							<p>With drizzling dreads and his beastily nature, he's quite similar to Blanka. Although he differs greatly from the green wild man from Street Fighter II. For instance, one of Necalli's moves closely resembles Wolverine's Berserker Attack from the Marvel Vs. Capcom series. In addition, he has a command grab with an EX version that can be used to deal big damage. He appears to have an upppercut, which can be used for anti-air.</p>
+
+							<p>It's also been brought up that once his V-Trigger has been activated, it runs throughout the course of the round. No other character has that, which can be problem. Nonetheless, Necalli is a welcomed addition to the Street Fighter universe and will fit right in.</p>
+
+							<center>
+								<iframe width="560" height="315" src="https://www.youtube.com/embed/OzrPqNHB1bo" frameborder="0" allowfullscreen></iframe>
+							</center>
+
+							<hr>
+
+							<p>Check out photos of Necalli below!</p>
+
+							<img class="featuredImg" src="http://www.fightersgeneration.com/nz5/game/sf5/sf5-necalli-screenshot5.jpg" width="100%">
+							<img class="featuredImg" src="http://www.fightersgeneration.com/nz5/game/sf5/sf5-necalli-screenshot4.jpg" width="100%">
+							<img class="featuredImg" src="http://www.fightersgeneration.com/nz5/game/sf5/sf5-necalli-screenshot.jpg" width="100%">
+							<img class="featuredImg" src="http://static3.gamespot.com/uploads/original/1197/11970954/2907935-11703465_10153577124927147_5214864499075597352_o.jpg" width="100%">
+
+						</div>
+					</div>
+				</div>
+				<div class="col-lg-3">
+					<div class="list-group">
+						<a href="fightSticks.html" class="list-group-item">
+							<img src="http://media.eventhubs.com/images/2015/12/03_mczsticks01.jpg" style="max-width:100%; max-height:100%; margin-bottom: 15px">
+							<h4 class="list-group-item-heading">Sweet New Fightsticks From Mad Catz</h4>
+							<p class="list-group-item-text">Capcom and Mad Catz partner up again to bring us these totally awesome new fightsticks and gamepads. Check'em out!</p>
+						</a>
+						<a href="dlcCharacters.html" class="list-group-item">
+							<img src="http://i.imgur.com/4tf3DQZ.jpg" style="max-width:100%; max-height:100%; margin-bottom: 15px">
+							<h4 class="list-group-item-heading">6 Rumored DLC Characters In SFV Post-Launch</h4>
+							<p class="list-group-item-text">Hackers have broke into the SFV beta and found these characters within the files. Find out if your character made the first cut for DLC!</p>
+						</a>
+						<a href="lauraDebut.html" class="list-group-item">
+							<img src="http://media.eventhubs.com/images/2015/10/08_laur01.jpg" style="max-width:100%; max-height:100%; margin-bottom: 15px">
+							<h4 class="list-group-item-heading">Laura Debuts In Street Fighter V</h4>
+							<p class="list-group-item-text">The new Brazilian Capoeira-Brazilian Jiu-Jitsu fighter surges to the Street Fighter V roster!</p>
+						</a>
+				</div>
+			</div>
+		</div>
+		&copy; GameScoop, Inc. 2016
+	</div>
+	<script src="//ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
+	<script src="js/bootstrap.js"></script>
+	</body>
+</html>
+

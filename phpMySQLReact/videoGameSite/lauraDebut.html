@@ -1,0 +1,105 @@
+<?php
+    session_start();
+    
+    if (!isset($_SESSION['username'])) {
+        header('Location: ./login.html');
+        exit();
+    }
+ 
+?>
+
+<!DOCTYPE html>
+<html>
+	<head>
+		<title>gamescoop.com</title>
+		<meta name="viewport" content="width=device-width, initial-scale=1.0">
+		<link href="css/bootstrap.min.css" rel="stylesheet">
+		<link href="css/styles.css" rel="stylesheet">
+	</head>
+	<body>
+		<div class="navbar navbar-inverse navbar-static-top">
+			<div class="container">
+				<a href="index.html" class="navbar-brand" style="font-size: 23px">GameScoop</a>
+				<div class="navbar-header"> <!-- Need this to make collapsed menu button work. -->
+					<button class="navbar-toggle" data-toggle="collapse" data-target=".navHeaderCollapse">
+						<span class="icon-bar"></span>
+						<span class="icon-bar"></span>
+						<span class="icon-bar"></span>
+					</button>
+				</div>
+					<div class="collapse navbar-collapse navHeaderCollapse">
+
+					<ul class="nav navbar-nav navbar-right">
+						<li><a href="index.html">Home</a></li>
+						<li><a href="about.html">About</a></li>
+						<li><a href="logout.php">Log Out</a></li>
+					</ul>
+				</div>
+			</div>
+		</div>
+
+		<div class="container">
+			<div class="row">
+				<div class="col-lg-9">
+					<div class="panel panel-default">
+						<div class="panel-body">
+							<div class="page-header">
+								<h3> Laura Debuts In Street Fighter V <small>Posted on Oct. 8</small></h3>
+							</div>
+							<img class="featuredImg" src="http://media.eventhubs.com/images/2015/10/08_laur13.jpg" width="100%">
+
+							<hr>
+
+							<h4>A Femme Fatale With Shocking Moves</h4>
+
+							<p>Here it is, folks! Your second original Street Fighter V character makes her way to the fray. Laura is a strikingly beautiful woman that perfectly personifies Brazil from her appearance. From the wrists bands, to the green and yellow attire, even the cool hair. You get a real taste of who the character is. In addition, her whole electric theme is quite awesome because it captures the infectious sounds of Brazil, from Capoeira to Samba, you can feel the electricity in the air and in her moves. </p>
+
+							<p>Although she may be all those things wrapped into one, she's quite the formidable opponent. With combinations of Capoeira and Brazilian Jiu-Jitsu, her moveset is familiar like Elena from Street Fighter III, yet unique because we have never seen a Brazilian Jiu-Jitsu fighter.</p>
+
+							<p>Her normals seems to have great range and good recovery, they can be used for poking tactics. Her special moves are striking moves and command grabs when used in combination with her projectile, she can be quite devastating. She joins the ranks of grapplers like R. Mika and Zangief, but surely a different breed.</p>
+
+							<p>P.S. She's the brother of Sean Matsuda from Street Fighter III. Awesome, I know.</p>
+
+							<center>
+								<iframe width="560" height="315" src="https://www.youtube.com/embed/Y0U49aqA2MM" frameborder="0" allowfullscreen></iframe>
+							</center>
+
+							<hr>
+
+							<p>Check out photos of Laura below!</p>
+
+							<img class="featuredImg" src="https://platformernews.files.wordpress.com/2015/10/sfv-laura-10.png" width="100%">
+							<img class="featuredImg" src="https://platformernews.files.wordpress.com/2015/10/sfv-laura-4.png" width="100%">
+							<img class="featuredImg" src="http://i.imgur.com/wEsThka.jpg" width="100%">
+							<img class="featuredImg" src="http://i.imgur.com/pXe82uY.jpg" width="100%">
+
+						</div>
+					</div>
+				</div>
+				<div class="col-lg-3">
+					<div class="list-group">
+						<a href="fightSticks.html" class="list-group-item">
+							<img src="http://media.eventhubs.com/images/2015/12/03_mczsticks01.jpg" style="max-width:100%; max-height:100%; margin-bottom: 15px">
+							<h4 class="list-group-item-heading">Sweet New Fightsticks From Mad Catz</h4>
+							<p class="list-group-item-text">Capcom and Mad Catz partner up again to bring us these totally awesome new fightsticks and gamepads. Check'em out!</p>
+						</a>
+						<a href="dlcCharacters.html" class="list-group-item">
+							<img src="http://i.imgur.com/4tf3DQZ.jpg" style="max-width:100%; max-height:100%; margin-bottom: 15px">
+							<h4 class="list-group-item-heading">6 Rumored DLC Characters In SFV Post-Launch</h4>
+							<p class="list-group-item-text">Hackers have broke into the SFV beta and found these characters within the files. Find out if your character made the first cut for DLC!</p>
+						</a>
+						<a href="necalliDebut.html" class="list-group-item">
+							<img src="http://i0.wp.com/hd1jump.com/wp-content/uploads/2015/07/1437382941-street-fighter-v-necalli.jpg" style="max-width:100%; max-height:100%; margin-bottom: 15px">
+							<h4 class="list-group-item-heading">Necalli Debuts In Street Fighter V</h4>
+							<p class="list-group-item-text">The mysterious Aztec warrior from parts unknown rampages his way to the Street Fighter V roster!</p>
+						</a>
+				</div>
+			</div>
+		</div>
+		&copy; GameScoop, Inc. 2016
+	</div>
+	<script src="//ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
+	<script src="js/bootstrap.js"></script>
+	</body>
+</html>
+
